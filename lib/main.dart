@@ -12,6 +12,7 @@ class dateDemo extends StatelessWidget {
       title: "Date-Demo",
       home: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.green.shade900,
             title: Text("Date Format Demo"),
           ),
           body: Container(
