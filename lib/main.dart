@@ -12,16 +12,63 @@ class dateDemo extends StatelessWidget {
       title: "Date-Demo",
       home: Scaffold(
           appBar: AppBar(
+            //AppBar
             backgroundColor: Colors.green.shade900,
-            title: Text("Date Format Demo"),
+            title: Text("Geeksforgeeks"), //AppBar title
           ),
           body: Container(
-            margin: EdgeInsets.fromLTRB(120, 80, 0, 0),
-            child: Text(
-              DateFormat.yMMMEd()
-                  .format(DateTime.now()), //displaying formatted date
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
+            //Container/Wrapper
+            width: double.infinity,
+            child: Column(
+                //use Column for more Text()
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    DateFormat.yMMMEd()
+                        .format(DateTime.now()), //Day,Month Date,Year
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.MEd()
+                        .format(DateTime.now()), //Day,Month/Date in Numbers
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.MMMMEEEEd()
+                        .format(DateTime.now()), //DayName,MonthName Date
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.yMMMMEEEEd()
+                        .format(DateTime.now()), //DayName,MonthName Date,Year
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.EEEE()
+                        .format(DateTime.now()), //Full DayName only
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.E().format(DateTime.now()), //Short DayName
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.M().format(DateTime.now()), //Month-Number
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.MMM().format(DateTime.now()), //short MonthName
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.LLLL().format(DateTime.now()), //full MonthName
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    DateFormat.j().format(DateTime.now()), //Current Time only
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                ]),
           )),
     );
   }
